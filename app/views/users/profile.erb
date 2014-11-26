@@ -1,0 +1,15 @@
+<div class = "home_page">
+
+  <div class ="felix">
+  </div>
+
+  <div class ="content">
+<h1><%=@user.name%></h1>
+<div class="everything_else">
+<div class="profile_pic"><img src="<%=@user.picture%>"></div>
+<a href="/user/<%=@user.id%>/posts"><%=Post.where(user_id: @user.id).count%> posts</a> <br>
+<a href="/user/<%=@user.id%>/comments"><%=Comment.where(user_id: @user.id).count%> comments</a>
+
+</div>
+</div>
+</div>

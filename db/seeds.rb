@@ -1,7 +1,9 @@
 10.times do
   User.create(name: Faker::Name.name,
               email: Faker::Internet.email,
-              password: "password")
+              password: "password",
+              picture: ("../img/#{(rand(1..5))}.jpg")
+              )
 
 end
 

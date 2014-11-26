@@ -1,0 +1,14 @@
+<div class="container">
+  <table>
+    <%@comments.all.each do |comment|%>
+    <tr>
+      <%post= Post.find_by(id: comment.post_id)%>
+      <td></td>
+      <td><a href="<%=post.url%>"><%=post.title%></a><br>
+      <%=comment.content%></td>
+      <td><%=comment.created_at.to_date%></td>
+
+    </tr>
+    <%end%>
+  </table>
+</div>

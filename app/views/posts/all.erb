@@ -1,12 +1,26 @@
 
 
-<div class = "container">
-<table>
+<div class = "home_page">
+
+ <div class ="felix">
+ </div>
+
+ <div class ="content">
+  <h1>Psychadelic Kitty Snot</h1>
+  <ul>
+      <li><a href="#">NU BOOg3R</a></li>
+
+  </ul>
+<div class="everything_else">
+  <table>
   <% Post.all.each do |post| %>
     <tr>
       <td><%=post.id%></td>
-      <td><a href="<%=post.url%>"><%=post.title%></a></td>
+      <td><a href="<%=post.url%>"><%=post.title%></a><br>
+      <span id="comment_link"><a href="/post/<%=post.id%>">Comments</a></span></td>
     </tr>
   <%end%>
 </table>
+</div>
+</div>
 </div>
