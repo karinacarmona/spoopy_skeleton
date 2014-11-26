@@ -1,0 +1,4 @@
+spoopy_skeleton
+===============
+
+SINATRA
